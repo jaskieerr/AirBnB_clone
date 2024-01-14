@@ -4,6 +4,7 @@ project BaseModel
 '''
 from uuid import uuid4
 from datetime import datetime
+from models import storage
 
 
 class BaseModel:
@@ -24,6 +25,7 @@ class BaseModel:
         self.id = str(uuid4())
         self.created_at = datetime.now()
         self.updated_at = self.created_at
+        storage.new(self)
 
     def __str__(self) -> str:
         '''returns class readable represnetation'''
@@ -33,6 +35,7 @@ class BaseModel:
     def save(self):
         '''updates public instance attribut with current datetime'''
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         '''returns class dict representation'''
