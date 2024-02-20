@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   min-height: 100vh;
   margin: 0; 
   padding: 0;
@@ -12,4 +13,8 @@ body {
 
 .content {
   flex:1;
+=======
+            margin: 0;
+            padding: 0;
+>>>>>>> ffc9df854bbdb5aab0dac6fb9b9a68638eefcb7c
 }
